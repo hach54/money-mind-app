@@ -1,0 +1,269 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* App container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header and Footer */
+header, footer {
+  background-color: inherit;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+header .logo {
+  height: 50px;
+  flex-shrink: 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
+  flex-grow: 1;
+}
+
+footer {
+  padding: 1rem;
+}
+
+/* Button container */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-content .heading {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header-content .mode-toggle {
+  margin-left: auto; /* Push the button to the right */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000000; /* Dark black background */
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between; /* Ensure equal space between items */
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  width: 100%; /* Ensure the navbar takes full width */
+}
+
+.navbar ul li {
+  flex: 1; /* Allow equal space for each item */
+  text-align: center; /* Center align text in each li */
+}
+
+.navbar ul li a {
+  display: block; /* Ensure the link takes full width of li */
+  text-decoration: none;
+  color: #ffffff; /* White text color */
+  font-weight: bold;
+  padding: 0.5rem; /* Padding inside links */
+  transition: color 0.3s;
+}
+
+.navbar ul li a.active, .navbar ul li a:hover {
+  color: #9aa5a5; /* Aqua color for active and hover */
+}
+
+/* Mode toggle button */
+.mode-toggle {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.mode-toggle.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.mode-toggle.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Page specific styles */
+.homepage, .user-registration-page, .mood-tracker-page, .budget-tracker-page, .financial-therapy-page, .rehabilitation-page, .sms-tracker-page, .journal-entry-page, .affordability-page {
+  padding: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.homepage {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.homepage h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.homepage .features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Ensure responsiveness */
+  margin-top: 30px;
+}
+
+.feature {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #c783ad;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.feature h3 {
+  color: #110336; /* Set color for headings */
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: inherit; /* Ensure text color inherits from body */
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+header.dark-mode, footer.dark-mode {
+  background-color: #1a1a1a;
+}
+
+.navbar.dark-mode {
+  background-color: #000000; /* Maintain dark black for dark mode */
+}
+
+button.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Input and textarea */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Center headings */
+h1, h2, h3 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-content .heading {
+    order: 1; /* Ensure heading is in the middle */
+    margin-bottom: 20px; /* Add spacing between heading and other elements */
+  }
+
+  .header-content .logo {
+    order: 0; /* Ensure logo is at the top */
+    margin-bottom: 20px; /* Add spacing between logo and other elements */
+  }
+
+  .header-content .mode-toggle {
+    order: 2; /* Ensure mode toggle is at the bottom */
+    margin-top: 1rem; /* Adjust margin for the mode toggle button */
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stack navbar items vertically */
+  }
+
+  .navbar ul li {
+    margin-bottom: 0.5rem; /* Add spacing between navbar items */
+  }
+
+  .navbar ul li:last-child {
+    margin-bottom: 0; /* Remove spacing from the last item */
+  }
+
+  header h1 {
+    font-size: 2rem; /* Adjust heading font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar ul li a {
+    padding: 0.75rem; /* Increase padding for better touch targets */
+    font-size: 1rem; /* Adjust font size for better readability */
+  }
+
+  header h1 {
+    font-size: 1.5rem; /* Adjust heading font size for smaller screens */
+  }
+
+  .feature {
+    min-width: 100%; /* Ensure feature takes full width on small screens */
+  }
+}
