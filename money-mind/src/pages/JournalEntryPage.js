@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const JournalEntryPage = () => {
-  const [entries, setEntries] = useState([]);
+  const [entries, setEntries] = useState(() => {
+    const savedEntries = localStorage.getItem('journalEntries');
+    return savedEntries ? JSON.parse(savedEntries) : [];
+  });
   const [entry, setEntry] = useState('');
   const [date, setDate] = useState(new Date().toISOString().substring(0, 10));
+
+  useEffect(() => {
+    localStorage.setItem('journalEntries', JSON.stringify(entries));
+  }, [entries]);
 
   const handleAddEntry = () => {
     setEntries([...entries, { date, entry }]);
