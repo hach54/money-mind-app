@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import '../styles/app.css';
 import '../styles/components.css';
@@ -17,14 +17,20 @@ import JournalEntryPage from '../pages/JournalEntryPage';
 import AffordabilityPage from '../pages/AffordabilityPage';
 
 const App = () => {
+  const [user, setUser] = useState(null);
+
+  const handleRegister = (userData) => {
+    setUser(userData);
+  };
+
   return (
     <div className="app-container">
-      <Header />
+      <Header user={user} />
       <Navbar />
       <main>
         <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route path="/register" element={<UserRegistrationPage />} />
+          <Route exact path="/" element={<HomePage user={user} />} />
+          <Route path="/register" element={<UserRegistrationPage onRegister={handleRegister} />} />
           <Route path="/mood-tracker" element={<MoodTrackerPage />} />
           <Route path="/budget-tracker" element={<BudgetTrackerPage />} />
           <Route path="/financial-therapy" element={<FinancialTherapyPage />} />

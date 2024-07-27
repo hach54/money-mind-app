@@ -1,0 +1,75 @@
+/* HomePage styles */
+.homepage {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .homepage .h1 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background: yellow;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .homepage .welcome-container h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #110336;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .homepage .user-info {
+    margin-top: 20px;
+  }
+  
+  .homepage .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .homepage .user-info h3 {
+    margin: 10px 0 0 0;
+    font-size: 1.5rem;
+    color: #110336;
+  }
+  
+  .homepage .welcome-message {
+    font-size: 1.2rem;
+    color: #110336;
+    margin-top: 10px;
+  }
+  
+  /* For dark mode */
+  body.dark-mode .homepage .welcome-container {
+    background: #555555;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .homepage .user-info h3 {
+    color: #ffffff;
+  }
+  
+  body.dark-mode .homepage .welcome-message {
+    color: #ffffff;
+  }
+  

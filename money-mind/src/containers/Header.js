@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../images/logo512.png';
+import '../styles/Header.css';
 
-const Header = () => {
+const Header = ({ user }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     return localStorage.getItem('theme') === 'dark';
   });
@@ -24,6 +25,12 @@ const Header = () => {
           <h1>MoneyMind</h1>
           <p>Mind your money, mind your future</p>
         </div>
+        {user && (
+          <div className="user-info">
+            <img src={user.profileImage} alt="Profile" className="profile-image" />
+            <span>Welcome, {user.name}!</span>
+          </div>
+        )}
         <button onClick={toggleMode} className={`mode-toggle ${isDarkMode ? 'light-mode' : 'dark-mode'}`}>
           {isDarkMode ? 'Light Mode' : 'Dark Mode'}
         </button>
