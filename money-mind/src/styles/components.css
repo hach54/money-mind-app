@@ -93,7 +93,7 @@ footer {
 }
 
 /* Page specific styles */
-.homepage, .user-registration-page, .mood-tracker-page, .budget-tracker-page, .financial-therapy-page, .rehabilitation-page, .sms-tracker-page, .journal-entry-page, .affordability-page {
+.homepage, .user-registration-page, .mood-tracker-page, .budget-tracker-page, .financial-therapy-page, .rehabilitation-page, .sms-tracker-page, .journal-entry-page, .Pricing-page {
   padding: 1rem;
   transition: background-color 0.3s, color 0.3s;
 }

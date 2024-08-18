@@ -25,14 +25,14 @@ const HomePage = ({ user }) => {
       )}
       <div className="features">
         <div className="feature">
-          <h2>Affordability</h2>
+          <h2>Pricing</h2>
           <p>
             Our "Financial Therapy" program provides affordable access to
             financial counseling and therapy services.
           </p>
         </div>
         <div className="feature">
-          <h2>Rehabilitation</h2>
+          <h2>FinancialRecoveryProgram</h2>
           <br></br>
           <p>
             Our "Financial Recovery" program helps users recover from financial

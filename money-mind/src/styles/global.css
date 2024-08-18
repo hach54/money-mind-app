@@ -117,7 +117,7 @@ footer {
 }
 
 /* Page specific styles */
-.homepage, .user-registration-page, .mood-tracker-page, .budget-tracker-page, .financial-therapy-page, .rehabilitation-page, .sms-tracker-page, .journal-entry-page, .affordability-page {
+.homepage, .user-registration-page, .mood-tracker-page, .budget-tracker-page, .financial-therapy-page, .FinancialRecoveryProgram-page, .sms-tracker-page, .journal-entry-page, .Pricing-page {
   padding: 1rem;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -140,24 +140,28 @@ footer {
 }
 
 .feature {
-  flex: 1;
-  min-width: 250px;
-  margin: 10px;
+  width: 45%;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #c783ad;
-  text-align: center;
-  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid #d1d1d1; /* Light gray border for a subtle touch */
+  border-radius: 8px; /* Slightly rounded corners for a modern look */
+  background-color: #f4f6f8; /* Light grayish-blue background for a clean, formal look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: scale(1.02); /* Slightly enlarges on hover for interaction */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
 }
 
 .feature h3 {
-  color: #110336; /* Set color for headings */
+  color: #1a1a1a; /* Dark gray for a professional heading color */
   margin-bottom: 10px;
 }
 
 .feature p {
-  color: inherit; /* Ensure text color inherits from body */
+  color: #4a4a4a; /* Slightly lighter gray for paragraph text */
+  line-height: 1.6;
 }
 
 /* Dark Mode Styling */

@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Affordability = () => {
+const Pricing = () => {
   return (
-    <div className="affordability">
-      <h2>Affordability</h2>
+    <div className="Pricing">
+      <h2>Pricing</h2>
       <p>MoneyMind offers a "Financial Therapy" program that provides users with affordable access to financial counseling and therapy services.</p>
     </div>
   );
 };
 
-export default Affordability;
+export default Pricing;

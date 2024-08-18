@@ -10,10 +10,10 @@ const Navbar = () => {
         <li><Link to="/mood-tracker">Mood Tracker</Link></li>
         <li><Link to="/budget-tracker">Budget Tracker</Link></li>
         <li><Link to="/financial-therapy">Financial Therapy</Link></li>
-        <li><Link to="/rehabilitation">Rehabilitation</Link></li>
+        <li><Link to="/FinancialRecoveryProgram">FinancialRecoveryProgram</Link></li>
         <li><Link to="/sms-tracker">SMS Tracker</Link></li>
         <li><Link to="/journal-entry">Journal Entry</Link></li>
-        <li><Link to="/affordability">Affordability</Link></li>
+        <li><Link to="/Pricing">Pricing</Link></li>
       </ul>
     </nav>
   );

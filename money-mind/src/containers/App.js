@@ -11,10 +11,10 @@ import UserRegistrationPage from '../pages/UserRegistrationPage';
 import MoodTrackerPage from '../pages/MoodTrackerPage';
 import BudgetTrackerPage from '../pages/BudgetTrackerPage';
 import FinancialTherapyPage from '../pages/FinancialTherapyPage';
-import RehabilitationPage from '../pages/RehabilitationPage';
+import FinancialRecoveryProgramPage from '../pages/FinancialRecoveryProgramPage';
 import SmsTrackerPage from '../pages/SmsTrackerPage';
 import JournalEntryPage from '../pages/JournalEntryPage';
-import AffordabilityPage from '../pages/AffordabilityPage';
+import PricingPage from '../pages/PricingPage';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -34,10 +34,10 @@ const App = () => {
           <Route path="/mood-tracker" element={<MoodTrackerPage />} />
           <Route path="/budget-tracker" element={<BudgetTrackerPage />} />
           <Route path="/financial-therapy" element={<FinancialTherapyPage />} />
-          <Route path="/rehabilitation" element={<RehabilitationPage />} />
+          <Route path="/FinancialRecoveryProgram" element={<FinancialRecoveryProgramPage />} />
           <Route path="/sms-tracker" element={<SmsTrackerPage />} />
           <Route path="/journal-entry" element={<JournalEntryPage />} />
-          <Route path="/affordability" element={<AffordabilityPage />} /> 
+          <Route path="/Pricing" element={<PricingPage />} /> 
         </Routes>
       </main>
       <Footer />
